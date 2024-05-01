@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    width: 100vh;
+    margin: auto;
+}
+
+.registration {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading h1 {
+    color: green;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.content label {
+    display: block;
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+.content input,
+.content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+
+.belowsection {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;;
+}
+
+.belowsection label {
+    flex-basis: 100%;
+    display: block;
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+.belowsection input,
+.belowsection select {
+    width: 50%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+.payment-options{
+    display:flex;
+    padding-right:20px    
+}
+.payment-options .radio{
+    justify-content: space-evenly;
+}
+
+.payment-options input[type="radio"]{
+    margin-right: 10px;
+    text-align: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background-color: rgb(5, 123, 219);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin-left: 50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="registration">
+            <div class="heading">
+                <h3>Registration form</h3>
+                <h1>Jaguar Gym</h1>
+                <p>Complete the below given details correctly</p>
+            </div>
+
+            <div class="content">
+                <label for="fullname">Full Name:</label>
+                <input type="text" placeholder="Enter Your Full Name" id="fullname" name="fullname" required>
+
+                <label for="fulladdress">Full Address</label>
+                <textarea name="fulladdress" id="fulladdress" cols="20" rows="1.25" placeholder="Enter your full address" required></textarea>
+
+                <label for="email">Email:</label>
+                <input  type="text" placeholder="Enter your email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" placeholder="Enter your phone number" id="phone" name="phone" required>
+            </div>
+
+            <div class="belowsection">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" required>
+
+                <label for="age">Age</label>
+                <input type="text" placeholder="Enter your age" id="age" name="age" required>
+
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="gender">Choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select> 
+                
+                <label for="weight">Weight(lbs)</label>
+                <input type="text" name="weight" id="weight" placeholder="Enter your correct Weight">
+
+                <label for="height">Height</label>
+                <input type="text" name="height" id="height" placeholder="Enter your correct height">
+
+                <label for="plan">Membership Plan</label> <br />
+                <select name="plan" id="plan">
+                <option value="">Choose a Plan</option>
+                <hr />
+                <optgroup label="Monthly">
+                    <option value="3month">3 Month</option>
+                    <option value="6month">6 Month</option>
+                    <option value="9month">9 Month</option>
+                </optgroup>
+                <hr />
+                <optgroup label="Yearly">
+                    <option value="1Year">1 Year</option>
+                    <option value="2Year">2 Year</option>
+                    <option value="3Year">3 Year</option>
+                </optgroup>
+                </select>
+                
+                
+                    <label for="payment">Mode of Payment</label>
+                    <div class="payment-options">
+                        <input type="radio" id="cash" name="payment" value="cash">
+                        <label for="cash">Cash</label>
+
+                        <input type="radio" id="online" name="payment" value="online">
+                        <label for="online">Online</label>
+
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Card</label>
+                    </div>
+                    <div class="button">
+                        <button class="btn">Submit</button>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

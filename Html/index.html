@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Sharing Page</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#codeOutput {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="codeInput" placeholder="Enter your code here..." ></textarea>
+        <button onclick="shareCode()">Share Code</button>
+        <div id="codeOutput"></div>
+    </div>
+
+    <script>
+      function shareCode() {
+          var codeInput = document.getElementById("codeInput").value;
+          var codeOutput = document.getElementById("codeOutput");
+          var uniqueCode = generateUniqueCode(); // Generate a unique code
+          codeOutput.innerHTML = "Your code is: <strong>" + uniqueCode + "</strong><br><br>" + codeInput;
+      }
+
+      function generateUniqueCode() {
+          // Generate a random alphanumeric string as a unique code
+          var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          var codeLength = 6;
+          var uniqueCode = '';
+          for (var i = 0; i < codeLength; i++) {
+              uniqueCode += chars.charAt(Math.floor(Math.random() * chars.length));
+          }
+          return uniqueCode;
+      }
+  </script>
+</body>
+</html>

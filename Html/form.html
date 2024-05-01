@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: rgb(2, 4, 43);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        height: 74px;
+        background-color: rgb(4, 7, 58);
+      }
+
+      a:hover{
+        font-weight: 900;
+      }
+      
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: blueviolet;
+        font-size: 1.03rem;
+      }
+
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 60px 60px;
+      }
+      .left {
+        font-size: 1.5rem;
+        margin: auto;
+      }
+      .right {
+        text-align: center;
+        margin: auto;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 190px 0;
+      }
+      .firstsection > div {
+        width: 30%;
+      }
+      .leftsection {
+        font-size: 2.5rem;
+      }
+
+      .leftsection .btn {
+        padding:12px;
+        background-color: #000121;
+        color:white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+
+      }
+      .rightsection {
+        width: 80%;
+        margin: 20px 0;
+      }
+      .purple {
+        color: blueviolet;
+      }
+      .grey{
+        color:grey;
+      }
+      #element {
+        color: blueviolet;
+      }
+      .secondsection {
+        max-width: 80vw;
+        margin: auto;
+      }
+
+      .skillsection{
+        display: flex;
+        justify-content: space-around;
+        padding:25px;
+        margin:40px;
+      }
+      .box{
+        height:100px;
+        width:100px;
+       
+      }
+      .text{
+        display: flex;
+        text-align: center;
+      }
+      
+      .skills{
+        display: flex;
+        justify-content: space-around;
+        padding:25px;
+        margin:40px;
+      }
+
+      .box1{
+        height:100px;
+        width:100px;
+        
+      }
+      
+      .skill{
+        display: flex;
+        justify-content: space-around;
+        padding:25px;
+        margin:40px;
+      }
+      
+      .boxx22{
+        height:100px;
+        width:100px;
+        
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left border">Sai Krishna</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <secion class="firstsection">
+        <div class="leftsection">
+          Hi,I am <span class="purple">Sai krishna</span>
+          <div>I am a passionate</div>
+          <!-- Element to contain animated typing -->
+          <span id="element"></span>
+          <div class="buttons">
+           <button class="btn">Download Resume</button>
+           <button class="btn">Visit Github</button>
+          </div>
+        </div>
+
+        <div class="rightsection">
+          <img src="/webdev.png" alt="webdevimage" />
+        </div>
+      </secion>
+      <hr />
+
+      <section class="secondsection">
+        <span class="grey">What i have done so far</span>
+        <h1>Skills</h1>
+        <div class="skillsection">
+          <div class="box1 box"><img src="/html.png" style="height:50px ; width:50px">
+            <b class="text">HTML</b></div>
+
+          <div class="box2 box"><img src="/css1.png" style="height:50px; width:50px">
+            <b class="text">CSS</b></div>
+
+          <div class="box3 box"><img src="/javascript.png" style="height:50px; width:50px">
+            <b class="text">Java Script</b></div>
+
+          <div class="box4 box"><img src="/bootstrap.png" style="height:50px; width:50px">
+            <b class="text">Bootstrap</b></div>
+        </div>
+
+        <div class="skills">
+          <div class="box1"><img src="/java.png" style="height:50px; width:50px">
+            <b class="text">Java</b></div>
+
+          <div class="box1 "><img src="/php.png" style="height:50px; width:50px">
+        <b class="text">Php</b></div>
+
+          <div class="box1 "><img src="/c.png" style="height:50px; width:50px">
+        <b class="text">C</b></div>
+
+          <div class="box1 "><img src="/c++.png" style="height:50px; width:50px">
+        <b class="text">C++</b></div>
+        </div>
+
+        <div class="skill">
+          <div class="boxx22"><img src="/figma.png" style="height:50px; width:50px">
+            <b class="pt-3 pl-3">Figma</b></div>
+
+          <div class="boxx22"></div>
+          <div class="boxx22"></div>
+          <div class="boxx22"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["web Developer", "Photographer", "Videographer"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>

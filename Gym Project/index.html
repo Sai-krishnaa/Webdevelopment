@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym website</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+      /* Desktops and laptops */
+      @media (min-width: 1024px) {
+        /* Add your CSS code for desktop and laptop screens here */
+      }
+
+      /* Tablets */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        /* Add your CSS code for tablets here */
+      }
+
+      /* Mobile devices */
+      @media (max-width: 767px) {
+        /* Add your CSS code for mobile devices here */
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 74px;
+        background-color: rgb(5, 4, 4);
+        position: fixed;
+        width: 100%;
+      }
+      a:hover {
+        font-weight: 900;
+        color: greenyellow;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 20px;
+        padding: 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      .hrline {
+        border: 0.1px solid white;
+      }
+
+      .btn {
+        margin: 20px;
+        border-radius: 0px;
+        padding: 5px 10px 5px 10px;
+        justify-content: center;
+        background-color: rgb(32, 228, 6);
+        color: white;
+        border-radius: 5px;
+        font-weight: 900;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .left {
+        font-size: 1.6rem;
+        margin: 16px;
+        padding: 2px;
+      }
+
+      .billboard {
+        background-image: url(image/main-banner.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 720px;
+      }
+      .leftside-text {
+        font-size: 7.5rem;
+        padding: 220px 0 0 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      .green {
+        color: rgb(0, 255, 0);
+        font-weight: 900;
+      }
+
+      #element {
+        font-size: 1.25rem;
+        font-weight: 900;
+        text-align: center;
+        padding: 0px 0px 0px 470px;
+      }
+
+      .secondclass {
+        color: black;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+      }
+      .content {
+        color: black;
+        padding: 50px;
+        text-align: center;
+        height: 600px;
+      }
+      .content .h1 {
+        padding: 0px;
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      .content p {
+        font-size: 1.12rem;
+        margin-bottom: 40px;
+      }
+
+      .flipcards {
+        display: flex;
+        justify-content: center;
+      }
+
+      .flipcards .box1,
+      .flipcards .box2,
+      .flipcards .box3 {
+        width: 370px;
+        height: 290px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 1px;
+        padding: 20px;
+        margin: 0px 20px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flipcards .box1 h3,
+      .flipcards .box2 h3,
+      .flipcards .box3 h3 {
+        margin-bottom: 20px;
+        font-weight: 900px;
+        font-size: 1.5rem;
+      }
+
+      .flipcards .box1 p,
+      .flipcards .box2 p,
+      .flipcards .box3 p {
+        margin-top: 20px; /* Add margin-top to create space between h3 and p */
+      }
+      .flipcards .box1:hover,
+      .flipcards .box2:hover,
+      .flipcards .box3:hover {
+        transform: scale(1.05); /* Increase scale on hover */
+        transition: transform 0.3s ease; /* Add smooth transition */
+      }
+
+      .thirdsection {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .services {
+        color: black;
+        padding: 50px;
+        text-align: center;
+        height: 800px;
+      }
+      .textthree {
+        margin-bottom: 50px;
+      }
+
+      .flashcards1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .flashcards2 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .flashcards1 .card1,
+      .flashcards1 .card2,
+      .flashcards1 .card3,
+      .flashcards1 .card4 {
+        width: 250px;
+        height: 300px;
+        background-color: #811919;
+        border-radius: 0px;
+        padding: 25px;
+        margin: 0px 20px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flashcards2 .card5,
+      .flashcards2 .card6,
+      .flashcards2 .card7,
+      .flashcards2 .card8 {
+        width: 250px;
+        height: 300px;
+        background-color: #4b00c4;
+        border-radius: 0px;
+        padding: 25px;
+        margin: 0px 20px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .flashcards1 .card1 {
+        background-image: url(image/cardio.jpg);
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards1 .card2 {
+        background-image: url(image/indoor\ cycling.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards1 .card3 {
+        background-image: url(image/zumba.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards1 .card4 {
+        background-image: url(image/crossfit.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+
+      .flashcards2 .card5 {
+        background-image: url(image/yoga.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards2 .card6 {
+        background-image: url(image/kickboxing.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards2 .card7 {
+        background-image: url(image/weightlifting.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards2 .card8 {
+        background-image: url(image/personaltraining.jpg);
+        background-position: center;
+        background-size: cover;
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: rgb(0, 0, 0);
+      }
+      .flashcards1 .card1,
+      .flashcards1 .card2,
+      .flashcards1 .card3,
+      .flashcards1 .card4,
+      .flashcards2 .card5,
+      .flashcards2 .card6,
+      .flashcards2 .card7,
+      .flashcards2 .card8 {
+        background-color: rgba(0,0,0,0.7); /* Adjust the RGBA values and opacity as needed */
+        background-blend-mode: multiply; /* Optional: Blend mode to mix the background color with the image */
+      }
+      .flashcards1 .card1,
+      .flashcards1 .card2,
+      .flashcards1 .card3,
+      .flashcards1 .card4,
+      .flashcards2 .card5,
+      .flashcards2 .card6,
+      .flashcards2 .card7,
+      .flashcards2 .card8 {
+        color: white; /* Set text color to white */
+      }
+
+      .flashcards1 .card1:hover,
+      .flashcards1 .card2:hover,
+      .flashcards1 .card3:hover,
+      .flashcards1 .card4:hover,
+      .flashcards2 .card5:hover,
+      .flashcards2 .card6:hover,
+      .flashcards2 .card7:hover,
+      .flashcards2 .card8:hover {
+        transform: scale(1.1); /* Increase scale on hover */
+        transition: transform 0.3s ease-in-out; /* Add smooth transition */
+      }
+
+      .fourthsection {
+        color: black;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+      }
+      .achievements {
+        color: black;
+        font-size: 1.5rem;
+        padding: 50px;
+        text-align: center;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .achievements .rounddial {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .rounddial .dial1,
+      .rounddial .dial2,
+      .rounddial .dial3,
+      .rounddial .dial4 {
+        width: 200px;
+        height: 200px;
+        
+        border: 3px solid green; /* Add green border */
+        border-radius: 50%;
+        margin: 50px 75px 50px 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 2rem;
+        color: #fff;
+      }
+
+      .rounddial .dial1 .dial1_2 {
+        display: flex;
+      }
+
+      .rounddial .dial1 .dial1_2,
+      .rounddial .dial2 .dial2_2,
+      .rounddial .dial3 .dial3_2,
+      .rounddial .dial4 .dial4_2 {
+        width: 175px;
+        height: 175px;
+        background-color: white;
+        color: black;
+        border: 3px solid rgba(0, 255, 0, 0.5);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+      }
+
+      .undertxt {
+        display: flex;
+        justify-content: space-evenly;
+        color: black;
+        text-align: center;
+        width: 100%;
+      }
+
+      .txtf1,
+      .txtf2,
+      .txtf3,
+      .txtf4 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin: 0px 65px 0px 65px;
+        text-align: center;
+      }
+
+      .fifthsection{
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-image: url(image/deadlift.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0,0,0,0.7);
+        background-blend-mode: multiply;
+        
+        
+      }
+
+      .Membership{
+        padding: 38px;
+        text-align: center;
+        height: 650px;
+      }
+      .bigmcards{
+        display: flex;
+      }
+      .bigmcards .mcard1,
+      .bigmcards .mcard2,
+      .bigmcards .mcard3{
+        width: 320px;
+        height: 480px;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        border-radius: 1px;
+        padding: 20px;
+        margin: 50px 30px 20px 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .bigmcards .mcard1:hover,
+      .bigmcards .mcard2:hover,
+      .bigmcards .mcard3:hover{
+        border:2px solid green;
+        /* CSS for changing background color of membership cards on hover */
+
+        background-color: black;
+        transition: background-color 0.3s ease; 
+      }
+      .bigmcards .mcard1 h1,
+      .bigmcards .mcard2 h1,
+      .bigmcards .mcard3 h1 {
+        font-weight: 900px;
+      }
+
+      .bigmcards .mcard1 ul,
+      .bigmcards .mcard2 ul,
+      .bigmcards .mcard3 ul {
+        list-style-type: none; /* Remove default bullets */
+      }
+
+      .bigmcards .mcard1 ul li,
+      .bigmcards .mcard2 ul li,
+      .bigmcards .mcard3 ul li {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        line-height: 45px;
+       
+      }
+
+      .bigmcards .mcard1 ul li::before,
+      .bigmcards .mcard2 ul li::before,
+      .bigmcards .mcard3 ul li::before {
+        content: "\2713"; /* Unicode for checkmark symbol */
+        margin-right: 10px; /* Add space between checkmark and text */
+      }
+
+      .bigmcards .mcard1 ul li.crossm1::before,
+      .bigmcards .mcard1 ul li.crossm2::before,
+      .bigmcards .mcard2 ul li.crossm3::before{
+        content: "\00D7"; /* Unicode for cross symbol */
+      }
+
+      /* Style the list items */
+      .bigmcards .mcard1 ul li,
+      .bigmcards .mcard2 ul li,
+      .bigmcards .mcard3 ul li {
+        font-size: 1.2rem;
+      }
+
+      .pricetag{
+        display: flex;
+      }
+
+      .bigmcards .mcard1 .pricetag1,
+      .bigmcards .mcard2 .pricetag2,
+      .bigmcards .mcard3  .pricetag3{
+        margin-top: 30px;
+      }
+      .bigmcards .mcard1 .pricetag1 strong,
+      .bigmcards .mcard2 .pricetag2 strong,
+      .bigmcards .mcard3 .pricetag3 strong{
+        font-size: 3.1rem;
+      }
+
+      .bigmcards .mcard1 button,
+      .bigmcards .mcard2 button,
+      .bigmcards .mcard3 button{
+        background-color: rgb(12, 213, 12); /* Remove background color */
+        color: rgb(0, 0, 0); /* Set text color */
+        border: none; /* Remove border */
+        padding: 10px 30px 10px 30px; /* Adjust padding */
+        font-weight: 900;
+        font-size: 18px;
+        box-shadow: 0 0 5px rgb(17, 208, 17);
+        cursor: pointer;
+      }
+
+      .bigmcards .mcard1 button:hover,
+      .bigmcards .mcard2 button:hover,
+      .bigmcards .mcard3 button:hover{
+        border: 2px solid white;
+        box-shadow: 0 0 5ps rgb(25, 204, 25),
+        0 0 25px rgb(25, 204, 25),
+        0 0 100px rgb(25,204,25),
+        0 0 200px rgb(25,204,25);
+      }
+      .sixthsection{
+        display: flex;
+        justify-content: left;
+        background-image: url(image/plant.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        color:black;
+      }
+      .sixthsection .container {
+        width: 22rem;
+        margin-top: 8rem;
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        height: 22rem;
+        margin-left: 120px;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+      }
+
+      .inputs input {
+        outline: none;
+        height: 30px;
+      }
+
+      #results {
+        font-size: 20px;
+        text-align: center;
+        color: blue;
+      }
+
+      .calcBtn {
+        width: 100%;
+        padding: 8px 0;
+        margin-top: 10px;
+        border-radius: 5px;
+        border-style: none;
+        background: #2563eb;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      .calcBtn:active{
+        background-color: #12ba26;
+      }
+
+      #message {
+        text-align: center;
+      }
+      
+      footer{
+        background-image: url(image/footer.jpg);
+        background-size: cover;
+        background-position: center;
+        padding-top: 50px;
+        margin-top: 10px;
+        
+    }
+    .containerf{
+        width: 1190px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        height: 400px;
+        margin-top:100px;
+        
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #05d621;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: white;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color: #0eca17;
+    }
+    .social-icons i:hover{
+        color: #0eca17;
+    }
+    .bottom-bar{
+        background: #0a0909;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+      </style>
+  </head>
+  <body>
+    <!-- Header part -->
+    <header>
+      <!--This is the navbar part -->
+      <nav> 
+        <div class="left">Jaguar Gym</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="">BMI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="button">
+          <a href="registrationform.html"> <button class="btn"><b>Start free trial</b></button></a>     
+        </div>
+      </nav>
+      <!--The navbar ends here-->
+      <hr class="hrline" />
+    </header>
+
+    <!--The main section starts here-->
+    <main>
+      <!-- Here's the first section The Billboard section -->
+      <section class="billboard">
+        <div class="leftside-text">
+          <span class="green">Feel </span>The Power
+        </div>
+        <!--Element to contain animated typing-->
+        <span id="element"></span>
+      </section>
+
+      <!-- Here is the second section the About section -->
+      <section class="secondclass">
+        <div class="content">
+          <h1>
+            About &nbsp;<i
+              class="fa-solid fa-dumbbell"
+              style="color: #12ba26"
+            ></i>
+          </h1>
+          <p class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+            odit tenetur provident autem molestias voluptas fugiat! Quod
+            suscipit nam, facilis sed impedit eius at sit voluptatum aut porro a
+            provident. Officia totam id cupiditate saepe ab nemo delectus
+            maxime, qui dolorum enim possimus beatae atque veniam temporibus,
+            architecto ut illo voluptas quaerat? Porro id pariatur accusamus ad
+            ratione, minima voluptates! Eligendi et perferendis sequi pariatur
+            aut, non quae est fugit repellat quas magnam laboriosam ex placeat.
+            Quam recusandae optio eveniet pariatur illo quae ut nam! Iusto ab
+            esse nobis amet! Explicabo consequuntur aspernatur, at repellat
+            adipisci deleniti numquam! Odio facere perspiciatis, blanditiis
+            deserunt adipisci delectus minus repudiandae nesciunt. Placeat iure
+            atque perspiciatis rerum quidem consectetur nisi eaque et tempora
+            voluptas! Minus accusamus delectus necessitatibus. Placeat
+            architecto non odio repellat dicta soluta assumenda similique fugiat
+            illo optio ab quaerat a quas, id magni laborum. Quisquam minima eius
+            possimus enim quam aut.
+          </p>
+
+          <div class="flipcards">
+            <div class="box1">
+              <h3 style="color: rgb(29, 168, 16)">WINNER COACHES</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                nostrum id, officia iusto recusandae inventore sapiente saepe
+                est possimus, non magni accusantium itaque necessitatibus amet
+                neque eaque rerum harum distinctio?
+              </p>
+            </div>
+            <div class="box2">
+              <h3 style="color: rgb(29, 168, 16)">AFFORDABLE PRICE</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                hic porro sapiente eius. Aut iusto, debitis dolor eaque eligendi
+                laborum praesentium at, doloribus consequatur earum sint
+                molestias asperiores explicabo officia.
+              </p>
+            </div>
+            <div class="box3">
+              <h3 style="color: rgb(29, 168, 16)">MODERN EQUIPMENTS</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non,
+                commodi minus reprehenderit, sequi numquam excepturi blanditiis
+                facilis eum ducimus cum nisi iusto laboriosam illum eaque
+                laborum quisquam ea est possimus?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heres the third sections the Services section -->
+      <section class="thirdsection">
+        <div class="services">
+          <div class="textthree">
+            <h1>
+              Unlock <span style="color: green">Your </span> Potential with Our
+              Exclusive Offerings
+            </h1>
+          </div>
+          <div class="flashcards1">
+            <div class="card1">CARDIO TRAINING</div>
+            <div class="card2">INDOOR CYCLING</div>
+            <div class="card3">ZUMBA FITNESS</div>
+            <div class="card4">CROSSFIT TRAINING</div>
+          </div>
+          <div class="flashcards2">
+            <div class="card5">YOGA</div>
+            <div class="card6">KICK BOXING</div>
+            <div class="card7">WEIGHT LIFTING</div>
+            <div class="card8">PERSONAL TRAINING</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heres the fourth section the Achievements section -->
+      <section class="fourthsection">
+        <div class="achievements">
+          <div class="textfour">
+            <h1>
+              OUR ACHIEVEMENTS &nbsp;<i
+                class="fa-solid fa-dumbbell"
+                style="color: #12ba26"
+              ></i>
+            </h1>
+          </div>
+          <div class="rounddial">
+            <div class="dial1"><div class="dial1_2">19</div></div>
+            <div class="dial2"><div class="dial2_2">879</div></div>
+            <div class="dial3"><div class="dial3_2">150</div></div>
+            <div class="dial4"><div class="dial4_2">7</div></div>
+          </div>
+
+          <div class="undertxt">
+            <div class="txtf1">Training Courses</div>
+            <div class="txtf2">Working Hours</div>
+            <div class="txtf3">Happy Customers</div>
+            <div class="txtf4">National Awards</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Heres the fifthsection the Mebership section -->
+      <section class="fifthsection">
+          <div class="Membership">
+          <div class="textfife">
+            <h1>
+              MEMBERSHIP &nbsp;<i class="fa-solid fa-dumbbell"style="color: #12ba26"></i></h1>
+          </div>
+          <div class="bigmcards">
+            <div class="mcard1">
+              <h1>Standard Plan</h1>
+              <div class="plan description">
+                <ul>
+                <li>Include Mebership</li>
+                <li>Access to all Gym Facilities</li>
+                <li class="crossm1">Diet Plan</li>
+                <li>Health and Fitness Tips</li>
+                <li>Personal Training</li>
+                <li class="crossm2">No Additional Amenities</li>
+              </ul>
+
+              <div class="pricetag1">
+                <p><sup><i class="fa-solid fa-indian-rupee-sign" style="color: #ffffff;"></i></sup><strong>3000</strong><em>/month</em></p>
+                <button>Buy Now</button>
+              </div>
+            </div>
+            </div>
+
+            <div class="mcard2">
+              <h1>Ulitimate Plan</h1>
+              <div class="plan description">
+                <ul>
+                <li>Include Mebership</li>
+                <li>Access to all Gym Facilities</li>
+                <li>Diet Plan</li>
+                <li>Health and Fitness Guidence</li>
+                <li class="crossm3">Personal Training</li>
+                <li>No Additional Amenities</li>
+              </ul>
+              <div class="pricetag2">
+                <p><sup><i class="fa-solid fa-indian-rupee-sign" style="color: #ffffff;"></i></sup> <strong>6000</strong><em>/month</em></p>
+                <button>Buy Now</button>
+              </div>
+            </div>
+            </div>
+
+            <div class="mcard3">
+              <h1>Professional Plan</h1>
+              <div class="plan description">
+                <ul>
+                <li>Include Mebership</li>
+                <li>Access to all Gym Facilities</li>
+                <li>Diet Plan</li>
+                <li>Health and Fitness Guidence</li>
+                <li>Personal Training</li>
+                <li>No Additional Amenities</li>
+              </ul>
+            </div>
+
+            <div class="pricetag3">
+              <p><sup><i class="fa-solid fa-indian-rupee-sign" style="color: #ffffff;"></i></sup><strong>8000</strong><em>/month</em></p>
+              <button>Buy Now</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      </section>
+
+      <!-- Heres the sixth section -->
+      <section class="sixthsection">
+        <div class="container">
+          <h2 style="text-align: center;">BMI Calculator</h2>
+          <form>
+              <p class="inputs">
+                  <label>Height (CM): </label>
+                  <input type="number" id="height" min="1">
+              </p>
+              <p class="inputs">
+                  <label>Weight (KG): </label>
+                  <input type="number" id="weight" min="1">
+              </p>
+      
+              <button class="calcBtn">Calculate</button>
+              <div style="margin-top: 20px;">Your BMI is: <p id="results"></p>
+              </div>
+              <p id="message"></p>      
+          </form>          
+      </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="containerf">
+        <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email:Info@jaguargymm.com</p>
+          <p>Phone: +91 9866999998</p>
+          <p>Address: Your current address</p>
+        </div>
+        <div class="footer-content">
+          <h3>Quick Links</h3>
+          <ul class="list">
+            <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+           </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; 2023 your company . All rights reserved</p>
+      </div>
+    </footer>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Push harder than yesterday if you want a different tomorrow",
+          "All progress takes place outside the comfort zone",
+          "What hurts today makes you stronger tomorrow",
+        ],
+        typeSpeed: 15,
+      });
+    </script>
+    <script src="script.js"></script>
+
+    
+  </body>
+</html>
