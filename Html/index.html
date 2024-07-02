@@ -3,67 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Sharing Page</title>
-    <style>
-      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: 50px auto;
-}
-
-textarea {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-#codeOutput {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-    </style>
+    <title>Web page</title>
+    <link rel="stylesheet" href="styleee.css">
 </head>
 <body>
-    <div class="container">
-        <textarea id="codeInput" placeholder="Enter your code here..." ></textarea>
-        <button onclick="shareCode()">Share Code</button>
-        <div id="codeOutput"></div>
-    </div>
-
-    <script>
-      function shareCode() {
-          var codeInput = document.getElementById("codeInput").value;
-          var codeOutput = document.getElementById("codeOutput");
-          var uniqueCode = generateUniqueCode(); // Generate a unique code
-          codeOutput.innerHTML = "Your code is: <strong>" + uniqueCode + "</strong><br><br>" + codeInput;
-      }
-
-      function generateUniqueCode() {
-          // Generate a random alphanumeric string as a unique code
-          var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-          var codeLength = 6;
-          var uniqueCode = '';
-          for (var i = 0; i < codeLength; i++) {
-              uniqueCode += chars.charAt(Math.floor(Math.random() * chars.length));
-          }
-          return uniqueCode;
-      }
-  </script>
+    <!-- Header start -->
+    <header>
+        <nav>
+            <div class="left">Odisha Cafe</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="buttton"><button class="btn">Order Now</button></div>
+        </nav>
+    </header>
+    <!-- Header end -->
+    <main>
+        <section class="billboard">
+            <div class="leftside">
+                Odisha Cafe
+            </div>
+            <div class="buttons">
+            <button class="btn">Explore More</button>
+            <button class="btn">Order Now</button>    
+            </div>
+            <div class="rightside">
+                <img src="/canyon-clouds-india-landscape-wallpaper-preview.jpg" alt="image">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>
