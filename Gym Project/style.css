@@ -64,8 +64,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 74px;
-  background-color: rgb(5, 4, 4);
+  height: 70px;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   flex-wrap: wrap;
@@ -196,7 +196,7 @@ nav ul li a {
 .flipcards .box1 h3,
 .flipcards .box2 h3,
 .flipcards .box3 h3 {
-  margin-bottom: 20px;
+  margin-bottom: -12px;
   font-weight: 900px;
   font-size: 1.5rem;
 }
@@ -514,8 +514,9 @@ nav ul li a {
 .bigmcards .mcard1 ul li::before,
 .bigmcards .mcard2 ul li::before,
 .bigmcards .mcard3 ul li::before {
-  content: "\2713"; /* Unicode for checkmark symbol */
-  margin-right: 10px; /* Add space between checkmark and text */
+  width:20px;
+  display:inline-block;
+  text-align:center;
 }
 
 .bigmcards .mcard1 ul li.crossm1::before,
@@ -538,7 +539,7 @@ nav ul li a {
 .bigmcards .mcard1 .pricetag1,
 .bigmcards .mcard2 .pricetag2,
 .bigmcards .mcard3  .pricetag3{
-  margin-top: 30px;
+  margin-top: 6px;
 }
 .bigmcards .mcard1 .pricetag1 strong,
 .bigmcards .mcard2 .pricetag2 strong,
